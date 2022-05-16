@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "myakscluster-0cba"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "myakscluster-0cba"
+  template:
+    metadata:
+      labels:
+        app: "myakscluster-0cba"
+    spec:
+      containers:
+        - name: "myakscluster-0cba"
+          image: "kalana.azurecr.io/myakscluster"
+          ports:
+          - containerPort: 8000
