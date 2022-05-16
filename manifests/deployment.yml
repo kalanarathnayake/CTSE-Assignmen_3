@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "ctseassignment3-1175"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "ctseassignment3-1175"
+  template:
+    metadata:
+      labels:
+        app: "ctseassignment3-1175"
+    spec:
+      containers:
+        - name: "ctseassignment3-1175"
+          image: "kalana.azurecr.io/ctseassignment3"
+          ports:
+          - containerPort: 8082
